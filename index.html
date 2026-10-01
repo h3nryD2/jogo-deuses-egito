@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jornada dos Deuses do Egito</title>
+    <meta
+      name="description"
+      content="Jogo educativo sobre os deuses do Egito Antigo"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">☀️</span>
+          <span>Egito Mítico</span>
+        </div>
+        <div class="status-pill">Jogo educativo</div>
+      </header>
+
+      <main class="game-panel">
+        <section id="start-screen" class="screen active">
+          <div class="hero-card">
+            <div class="hero-copy">
+              <p class="eyebrow">Aventura histórica</p>
+              <h1>Jornada dos Deuses do Egito</h1>
+              <p class="intro-text">
+                Explore o mundo dos deuses do Egito Antigo e teste seu conhecimento
+                sobre Ra, Isis, Osíris, Hórus e muito mais.
+              </p>
+              <div class="rules">
+                <div><strong>5</strong> perguntas</div>
+                <div><strong>⭐</strong> pontuação</div>
+                <div><strong>🏺</strong> cultura egípcia</div>
+              </div>
+              <button id="start-btn" class="primary-btn">Começar a jornada</button>
+            </div>
+            <div class="hero-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=900&q=80"
+                alt="Pirâmides do Egito"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="quiz-screen" class="screen hidden">
+          <div class="hud">
+            <div class="pill">Pergunta <span id="question-number">1</span>/5</div>
+            <div class="pill score-pill">Pontuação: <span id="score">0</span></div>
+          </div>
+
+          <div class="question-card">
+            <div class="question-image-wrap">
+              <img id="question-image" src="" alt="Imagem da pergunta" />
+            </div>
+
+            <div class="question-content">
+              <p class="eyebrow" id="category-label">Mitologia egípcia</p>
+              <h2 id="question-text">Pergunta</h2>
+              <div id="answers" class="answers"></div>
+              <div id="feedback" class="feedback" aria-live="polite"></div>
+              <button id="next-btn" class="primary-btn hidden">Próxima pergunta</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="final-screen" class="screen hidden">
+          <div class="results-card">
+            <p class="eyebrow">Resultado final</p>
+            <h2 id="final-title">Parabéns!</h2>
+            <p id="final-message">Você terminou a jornada.</p>
+            <div class="final-score-box">
+              <span id="final-score">0</span>
+              <small>pontos</small>
+            </div>
+            <button id="restart-btn" class="primary-btn">Jogar novamente</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
